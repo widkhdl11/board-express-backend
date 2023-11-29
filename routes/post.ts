@@ -211,6 +211,7 @@ router.put("/:id", verifyToken, async (req: any, res) => {
         title: title ? title : existPost.title,
         content: content ? content : existPost.content,
       },
+      select,
     });
 
     return res.json({
